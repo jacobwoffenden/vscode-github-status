@@ -1,11 +1,13 @@
 {
   "name": "vscode-github-status",
-  "displayName": "GitHub Status",
+  "displayName": "GitHub Platform Status",
   "description": "Displays the current GitHub platform status in the Visual Studio Code status bar.",
   "version": "0.0.1",
+  "author": "Jacob Woffenden <jacob@woffenden.io> (http://jacobwoffenden.com)",
+  "repository": "jacobwoffenden/vscode-github-status",
   "publisher": "jacobwoffenden",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.134.0"
   },
   "categories": [
     "Other"
@@ -39,16 +41,17 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/node": "20.19.43",
     "@types/vscode": "1.134.0",
     "@typescript-eslint/eslint-plugin": "8.68.0",
     "@typescript-eslint/parser": "8.68.0",
+    "@vscode/vsce": "3.9.2",
     "eslint": "8.57.1",
     "typescript": "5.9.3"
   }
