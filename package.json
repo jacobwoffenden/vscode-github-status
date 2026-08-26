@@ -1,0 +1,55 @@
+{
+  "name": "vscode-github-status",
+  "displayName": "GitHub Status",
+  "description": "Displays the current GitHub platform status in the Visual Studio Code status bar.",
+  "version": "0.0.1",
+  "publisher": "jacobwoffenden",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "githubStatus.refresh",
+        "title": "GitHub Status: Refresh"
+      },
+      {
+        "command": "githubStatus.openStatusPage",
+        "title": "GitHub Status: Open Status Page"
+      }
+    ],
+    "configuration": {
+      "title": "GitHub Status",
+      "properties": {
+        "githubStatus.pollIntervalMinutes": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 60,
+          "description": "How often (in minutes) to poll the GitHub status API."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "@types/vscode": "1.134.0",
+    "@typescript-eslint/eslint-plugin": "8.68.0",
+    "@typescript-eslint/parser": "8.68.0",
+    "eslint": "8.57.1",
+    "typescript": "5.9.3"
+  }
+}
