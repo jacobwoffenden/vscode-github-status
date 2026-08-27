@@ -2,7 +2,7 @@
   "name": "vscode-github-status",
   "displayName": "GitHub Platform Status",
   "description": "Displays the current GitHub platform status in the Visual Studio Code status bar.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jacob Woffenden <jacob@woffenden.io> (http://jacobwoffenden.com)",
   "repository": {
     "type": "git",
